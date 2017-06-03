@@ -13,7 +13,7 @@ client.on('message', message => {
 if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 
-if(message.content.startsWith(prefix + 'say')) {
+if(message.content.startsWith(prefix + 's')) {
 let argss = message.content.split(" ").slice(1);
 let tempmsg = argss.join(" ");
 message.delete();
