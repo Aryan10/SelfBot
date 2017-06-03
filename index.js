@@ -5,7 +5,7 @@ const prefix = '×';
 client.login(process.env.TOKEN);
 
 client.on('guildMemberAdd', member => {
-if (guild.id !== '290162830009696257') return;
+if (member.guild.id !== '290162830009696257') return;
 member.guild.defaultChannel.send('Welcome:smiley:');
 });
 
