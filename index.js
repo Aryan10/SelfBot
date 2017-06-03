@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '×';
+
 client.login(process.env.TOKEN);
 
 client.on('guildMemberAdd', member => {
@@ -22,7 +23,7 @@ description:tempmsg
 }});
 }
 
-if(message.content.startsWith(prefix + 'setgame'))u {
+if(message.content.startsWith(prefix + 'setgame')) {
 let game = message.content.split(' ').slice(1)
 let playing = game.join(' ')
 message.delete();
@@ -30,3 +31,11 @@ client.user.setGame(playing)
 }
 
 });
+
+process.on("unhandledRejection", err => {
+    console.log(err.stack);
+});
+client.on('error', (e) => console.error(e));
+client.on('warn', (e) => console.warn(e));
+client.on('debug', (e) => console.info(e));
+
