@@ -23,7 +23,7 @@ description:tempmsg
 }});
 }
 
-if(message.content.startsWith(prefix + 'setgame')) {
+if(message.content.startsWith(prefix + 'game')) {
 let game = message.content.split(' ').slice(1)
 let playing = game.join(' ')
 message.delete();
