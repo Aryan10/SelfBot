@@ -13,7 +13,7 @@ client.on('message', message => {
 if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 
-if(message.content.startsWith(prefix + 's')) {
+if(message.content.startsWith(prefix + 'say')) {
 let argss = message.content.split(" ").slice(1);
 let tempmsg = argss.join(" ");
 message.delete();
@@ -23,11 +23,18 @@ description:tempmsg
 }});
 }
 
-if(message.content.startsWith(prefix + 'game')) {
+if(message.content.startsWith(prefix + 'setgame')) {
 let game = message.content.split(' ').slice(1)
 let playing = game.join(' ')
 message.delete();
 client.user.setGame(playing)
+}
+
+if(message.content.startsWith(prefix + 'setavatar')){
+let newavatartime = message.content.split(" ").slice(1);
+let blasty = newavatartime.join(" ");
+message.reply('New Avatar Set!');
+client.user.setAvatar(blasty);
 }
 
 });
