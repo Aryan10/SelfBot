@@ -23,6 +23,19 @@ description:tempmsg
 }});
 }
 
+if (message.content.startsWith(prefix + 'eval')) {
+try {
+const args = message.content.split(' ').slice(1);
+const code = args.join(' ');
+let evaled = eval(code);
+if (typeof evaled !== 'string')
+evaled = require('util').inspect(evaled);
+message.channel.send(clean(evaled), {code:'xl'});
+} catch (err) {
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+}
+}
+
 if(message.content.startsWith(prefix + 'setgame')) {
 let game = message.content.split(' ').slice(1)
 let playing = game.join(' ')
