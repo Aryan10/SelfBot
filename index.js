@@ -42,7 +42,7 @@ evaled = require('util').inspect(evaled);
 message.channel.send({embed: {
 color:3447003,
 title:'EVAL OUTPUT',
-description:clean(evaled), {code:'xl'}
+description:`${clean(evaled)}`
 }});
 } catch (err) {
       message.channel.send({embed: {
