@@ -19,10 +19,10 @@ message.channel.send({embed: {
 color:3447003,
 fields: [{
 name:'Current Commands',
-value:'setgame, say, setavatar'},
+value:'`setgame, say, setavatar`'},
 {
 name:'Member Exclusive Commands',
-value:'_POKEGAMER#5095_\nmembers\n_Aryan 10#7484_\neval, help'},
+value:'_POKEGAMER#5095_\n`members`\n_Aryan 10#7484_\n`eval, help`'},
 {
 name:'SelfBots Prefix',
 value:'Aryan 10#7484 `×`\nPOKEGAMER#5095 `+`\nryan#3770 `?`\nDuskSkeleton303//MysteriousMage#7022 `d-`'},
