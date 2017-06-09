@@ -41,8 +41,8 @@ if (typeof evaled !== 'string')
 evaled = require('util').inspect(evaled);
 message.channel.send({embed: {
 color:3447003,
-title:'EVAL OUTPUT',
-description:`${clean(evaled)}`
+title:'EVAL',
+description:`**EVAL INPUT:**\n\`\`\`${code}\`\`\`\n\n**EVAL OUTPUT:\n\`\`\`${clean(evaled)}\`\`\``
 }});
 } catch (err) {
       message.channel.send({embed: {
