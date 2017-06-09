@@ -12,6 +12,10 @@ member.guild.defaultChannel.send('Welcome:smiley:');
 client.on('message', message => {
 if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
+const clean = text => {
+if (typeof(text) === "string")
+return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203)); else 
+return text;
 
 if(message.content.startsWith(prefix + 'say')) {
 let argss = message.content.split(" ").slice(1);
