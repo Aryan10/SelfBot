@@ -13,6 +13,22 @@ client.on('message', message => {
 if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 
+if(message.content.startsWith(prefix + 'help')){ 
+if(message.channel.id !== '322735410319065088') return;
+message.channel.send({embed: {
+color:3447003,
+fields: [{
+name:'Current Commands',
+value:'setgame, say, setavatar'},
+{
+name:'Member Exclusive Commands',
+value:'_POKEGAMER#5095_\nmembers\n_Aryan 10#7484_\neval, help'},
+{
+name:'SelfBots Prefix',
+value:'Aryan 10#7484 `×`\nPOKEGAMER#5095 `+`\nryan#3770 `?`\nDuskSkeleton303//MysteriousMage#7022 `d-`'},
+]
+}});
+}
 
 if(message.content.startsWith(prefix + 'say')) {
 let argss = message.content.split(" ").slice(1);
