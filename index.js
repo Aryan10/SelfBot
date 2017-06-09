@@ -32,7 +32,7 @@ if (typeof evaled !== 'string')
 evaled = require('util').inspect(evaled);
 message.channel.send(clean(evaled), {code:'xl'});
 } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${err}\n\`\`\``);
+      message.channel.send(`\`ERROR\` \`\`\`xl\n${catch(err)}\n\`\`\``);
 }
 }
 
