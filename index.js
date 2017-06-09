@@ -26,9 +26,13 @@ description:tempmsg
 
 if (message.content.startsWith(prefix + 'eval')) {
 const clean = text => {
-if (typeof(text) === "string")
-return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203)); else 
+if (typeof(text) === "string") {
+return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+}else {
 return text;
+}
+
+}
 try {
 const args = message.content.split(' ').slice(1);
 const code = args.join(' ');
