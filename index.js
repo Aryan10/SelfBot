@@ -39,9 +39,16 @@ const code = args.join(' ');
 let evaled = eval(code);
 if (typeof evaled !== 'string')
 evaled = require('util').inspect(evaled);
-message.channel.send(clean(evaled), {code:'xl'});
+message.channel.send({embed: {
+color:3447003,
+title:'EVAL OUTPUT',
+description:clean(evaled), {code:'xl'}
+}});
 } catch (err) {
-      message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+      message.channel.send({embed: {
+      title:'EVAL ERROR',
+      description:`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``
+      }});
 }
 }
 
