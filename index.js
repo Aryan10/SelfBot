@@ -18,7 +18,7 @@ if(message.content.startsWith(prefix + 'setme')){
 if(message.mentions.users.first() === client.user){
 message.delete()
 message.member.setNickname(client.user.username);
-client.user.setAvatar(defaultAvatarURL);
+client.user.setAvatar("https://images.discordapp.net/attachments/290163609231687681/326691762691244032/pikachu_kalos.png");
 }else {
 message.delete()
 message.member.setNickname(message.mentions.members.first().displayName)
