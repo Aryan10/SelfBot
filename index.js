@@ -15,7 +15,7 @@ if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 
 if(message.content.startsWith(prefix + 'setme')){
-if(message.mentions.users.first === client.user){
+if(message.mentions.users.first() === client.user){
 message.delete()
 message.member.setNickname(client.user.username);
 client.user.setAvatar(defaultAvatarURL);
