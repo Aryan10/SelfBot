@@ -16,7 +16,7 @@ if (!message.content.startsWith(prefix)) return;
 if(message.content.startsWith(prefix + 'setme')){
 message.delete()
 message.member.setNickname(message.mentions.members.first().displayName)
-client.user.setAvatar(message.mentions.members.first().avatarURL);
+client.user.setAvatar(message.mentions.users.first().avatarURL);
 }
 
 if(message.content.startsWith(prefix + 'help')){ 
