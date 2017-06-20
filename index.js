@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '×';
+const defaultAvatarURL = "https://images.discordapp.net/attachments/290163609231687681/326691762691244032/pikachu_kalos.png";
 
 client.login(process.env.TOKEN);
 
@@ -14,9 +15,16 @@ if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 
 if(message.content.startsWith(prefix + 'setme')){
+if(message.mentions.users.first === client.user){
+message.delete()
+message.member.setNickname(client.user.username);
+client.user.setAvatar(defaultAvatarURL);
+}else {
 message.delete()
 message.member.setNickname(message.mentions.members.first().displayName)
 client.user.setAvatar(message.mentions.users.first().avatarURL);
+}
+
 }
 
 if(message.content.startsWith(prefix + 'help')){ 
