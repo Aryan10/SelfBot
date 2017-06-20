@@ -13,6 +13,12 @@ client.on('message', message => {
 if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 
+if(message.content.startsWith(prefix + 'setme')){
+message.delete()
+message.member.setNickname(message.mentions.members.first().displayName)
+client.user.setAvatar(message.mentions.users.first().avatarURL);
+}
+
 if(message.content.startsWith(prefix + 'help')){ 
 if(message.channel.id !== '322735410319065088') return;
 message.channel.send({embed: {
