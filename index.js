@@ -1,22 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const me = "273865811133857792";
-const pokegamer = "309311003303215108"
-const ryan = "280749589974482945"
-const dusk = "256049054633558016"
-client.login(process.env.TOKEN);
-if (client.user.id === me) {
 const prefix = "×";
-}else
-if (client.user.id === pokegamer) {
-const prefix = "+";
-}else
-if (client.user.id === ryan) {
-const prefix = "?";
-}else
-if (client.user.id === dusk) {
-const prefix = "d-";
-}
+client.login(process.env.TOKEN);
 
 client.on('message', message => {
 if (message.author.id !== client.user.id) return;
