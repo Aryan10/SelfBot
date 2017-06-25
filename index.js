@@ -7,7 +7,7 @@ client.on('message', message => {
 if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 const args = message.content.split(" ");
-const command = args.shift().slice(config.prefix.length);  
+const command = args.shift().slice(prefix.length);  
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
