@@ -6,7 +6,7 @@ const ryan = "280749589974482945"
 const dusk = "256049054633558016"
 client.login(process.env.TOKEN);
 
-client.on('message', message => {
+client.on('ready', () => {
 if (client.user.id === me) {
 const prefix = "×";
 }else
@@ -19,6 +19,9 @@ const prefix = "?";
 if (client.user.id === dusk) {
 const prefix = "d-";
 }
+    });
+
+client.on('message', message => {
 if (message.author.id !== client.user.id) return;
 if (!message.content.startsWith(prefix)) return;
 const args = message.content.split(" ");
