@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "×";
+const rohink_prefix = ".";
 const pokegamer_prefix = "+";
 const ryan_prefix = "?";
 const dusk_prefix = "d-";
@@ -12,6 +13,14 @@ const args = message.content.split(" ");
 const command = args.shift().slice(prefix.length); 
 
 if (message.content.startsWith(prefix)){
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
+if (message.content.startsWith(rohink_prefix)){
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
