@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "×";
-const rohink_prefix = ".";
+const rohink_prefix = "!";
 const pokegamer_prefix = "+";
 const ryan_prefix = "?";
 const dusk_prefix = "d-";
