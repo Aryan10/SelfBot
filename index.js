@@ -31,6 +31,7 @@ console.error(err);
 }
 }else
 if (message.content.startsWith(pokegamer_prefix)){
+    if (message.author.discriminator !== "5095") return;
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
@@ -39,6 +40,7 @@ console.error(err);
 }
 }else
 if (message.content.startsWith(ryan_prefix)){
+    if (message.author.discriminator !== "3770") return;
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
@@ -47,6 +49,7 @@ console.error(err);
 }
 }else
 if (message.content.startsWith(dusk_prefix)){
+    if (message.author.discriminator !== "7022") return;
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
