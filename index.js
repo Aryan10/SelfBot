@@ -9,7 +9,7 @@ const dusk_prefix = pre.dusk_prefix;
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
-if (message.author.id !== client.user.id || "273865811133857792") return;
+if (message.author.id !== client.user.id) return;
 const args = message.content.split(" ");
 const command = args.shift().slice(prefix.length); 
 
@@ -23,7 +23,7 @@ console.error(err);
 }
 }else
 if (message.content.startsWith(rohink_prefix)){
-    if (message.author.discriminator !== "4066" || "7484") return;
+    if (message.author.discriminator !== "4066") return;
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
