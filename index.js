@@ -1,10 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "×";
-const rohink_prefix = "!";
-const pokegamer_prefix = "+";
-const ryan_prefix = "?";
-const dusk_prefix = "d-";
+const pre = require("./prefix.json");
+const prefix = pre.prefix;
+const rohink_prefix = pre.rohink_prefix;
+const pokegamer_prefix = pre.pokegamer_prefix;
+const ryan_prefix = pre.ryan_prefix;
+const dusk_prefix = pre.dusk_prefix;
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
