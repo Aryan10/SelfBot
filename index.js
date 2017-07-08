@@ -10,6 +10,16 @@ const sceptile_prefix = pre.sceptile_prefix;
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
+if (client.user.id === "311906389998043136"){
+  const spy = new Discord.RichEmbed()
+  .setAuthor(message.author.displayName, message.author.avatarURL)
+  .setFooter(`<@${message.author.id}>`)
+  .setDescription(message.content)
+  .setThumbnail(message.author.avatarURL)
+  if (message.guild.id === "275936975616212992"){
+    client.guilds.find('name', 'Spy').channels.find('name', message.channel.name).send({embed: spy});
+  }
+}
 if (message.author.id !== client.user.id) return;
 const args = message.content.split(" ");
 const command = args.shift().slice(prefix.length); 
