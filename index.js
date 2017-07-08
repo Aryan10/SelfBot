@@ -6,6 +6,7 @@ const rohink_prefix = pre.rohink_prefix;
 const pokegamer_prefix = pre.pokegamer_prefix;
 const ryan_prefix = pre.ryan_prefix;
 const dusk_prefix = pre.dusk_prefix;
+const sceptile_prefix = pre.sceptile_prefix;
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
@@ -15,6 +16,15 @@ const command = args.shift().slice(prefix.length);
 
 if (message.content.startsWith(prefix)){
     if (message.author.discriminator !== "7484") return;
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
+if (message.content.startsWith(sceptile_prefix)){
+    if (message.author.discriminator !== "5805") return;
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
