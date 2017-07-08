@@ -13,7 +13,8 @@ client.on('message', message => {
 if (client.user.id === "311906389998043136"){
   if (message.guild.id === "275936975616212992"){
   const spy = new Discord.RichEmbed()
-  .setAuthor(message.author.displayName, message.author.avatarURL)
+  .setAuthor(message.member.displayName, message.author.avatarURL)
+  .setColor(0xFFFFFF)
   .setFooter(`<@${message.author.id}>`)
   .setDescription(message.content)
   .setThumbnail(message.author.avatarURL)
