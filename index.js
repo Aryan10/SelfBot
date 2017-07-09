@@ -79,7 +79,7 @@ commandFile.run(client, message, args);
 console.error(err);
 }
 }else
-if (message.content.startsWith(prefix + sceptile_prefix)){
+if (message.content.startsWith('♡' + sceptile_prefix)){
     if (message.author.discriminator !== "7484") return;
     if (client.user.discriminator !== "5805") return;
 try {
@@ -89,7 +89,7 @@ commandFile.run(client, message, args);
 console.error(err);
 }
 }else
-if (message.content.startsWith(prefix + rohink_prefix)){
+if (message.content.startsWith('♡' + rohink_prefix)){
     if (message.author.discriminator !== "7484") return;
     if (client.user.discriminator !== "4066") return;
 try {
@@ -99,7 +99,7 @@ commandFile.run(client, message, args);
 console.error(err);
 }
 }else
-if (message.content.startsWith(prefix + pokegamer_prefix)){
+if (message.content.startsWith('♡' + pokegamer_prefix)){
     if (message.author.discriminator !== "7484") return;
     if (client.user.discriminator !== "5095") return;
 try {
@@ -109,7 +109,7 @@ commandFile.run(client, message, args);
 console.error(err);
 }
 }else
-if (message.content.startsWith(prefix + ryan_prefix)){
+if (message.content.startsWith('♡' + ryan_prefix)){
     if (message.author.discriminator !== "7484") return;
     if (client.user.discriminator !== "3770") return;
 try {
@@ -119,7 +119,7 @@ commandFile.run(client, message, args);
 console.error(err);
 }
 }else
-if (message.content.startsWith(prefix + dusk_prefix)){
+if (message.content.startsWith('♡' + dusk_prefix)){
     if (message.author.discriminator !== "7484") return;
     if (client.user.discriminator !== "7022") return;
 try {
