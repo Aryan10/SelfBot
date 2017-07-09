@@ -23,7 +23,7 @@ if (client.user.id === "311906389998043136"){
 }
 if (message.author.id !== client.user.id) return;
 const args = message.content.split(" ");
-const command = args.shift().slice(prefix.length); 
+const command = args.shift().slice(prefix.length);
 
 if (message.content.startsWith(prefix)){
     if (message.author.discriminator !== "7484") return;
@@ -72,6 +72,56 @@ console.error(err);
 }else
 if (message.content.startsWith(dusk_prefix)){
     if (message.author.discriminator !== "7022") return;
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
+if (message.content.startsWith(prefix + sceptile_prefix)){
+    if (message.author.discriminator !== "7484") return;
+    if (client.user.discriminator !== "5805") return;
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
+if (message.content.startsWith(prefix + rohink_prefix)){
+    if (message.author.discriminator !== "7484") return;
+    if (client.user.discriminator !== "4066") return;
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
+if (message.content.startsWith(prefix + pokegamer_prefix)){
+    if (message.author.discriminator !== "7484") return;
+    if (client.user.discriminator !== "5095") return;
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
+if (message.content.startsWith(prefix + ryan_prefix)){
+    if (message.author.discriminator !== "7484") return;
+    if (client.user.discriminator !== "3770") return;
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
+if (message.content.startsWith(prefix + dusk_prefix)){
+    if (message.author.discriminator !== "7484") return;
+    if (client.user.discriminator !== "7022") return;
 try {
 let commandFile = require(`./commands/${command}.js`);
 commandFile.run(client, message, args);
