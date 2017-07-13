@@ -1,4 +1,6 @@
 exports.run = (client, message, args) => {
+const getSpy = client.guilds.get('275936975616212992');
+const findSpy = client.guilds.find('id', '275936975616212992');
 
 const clean = text => {
 if (typeof(text) === "string") {
@@ -18,7 +20,8 @@ evaled = require('util').inspect(evaled);
 message.channel.send({embed: {
 color:3447003,
 title:'EVAL',
-description:`**EVAL INPUT:**\n\`\`\`${code}\`\`\`\n\n**EVAL OUTPUT:**\n\`\`\`${clean(evaled)}\`\`\``
+description:`**EVAL INPUT:**\n\`\`\`${code}\`\`\`\n\n**EVAL OUTPUT:**\n\`\`\`${clean(evaled)}\`\`\``,
+footer:clean(evaled)
 }});
 } catch (err) {
       message.channel.send({embed: {
