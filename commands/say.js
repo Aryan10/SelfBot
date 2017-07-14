@@ -7,5 +7,5 @@ const Discord = require ("discord.js");
 const embed = new Discord.RichEmbed()
 .setColor(color[random])
 .setDescription(message.content.split(" ").slice(1).join(" "))
-setTimeout(() => {message.edit({embed})}, 1);
+setTimeout(() => {message.channel.send({embed})}, 1);
 }
