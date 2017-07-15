@@ -79,7 +79,7 @@ commandFile.run(client, message, args);
 console.error(err);
 }
 }else
-if (message.content.startsWith('♡' + sceptile_prefix)){
+if (message.content.startsWith('♡' + mega_prefix)){
     if (message.author.discriminator !== "7484") return;
     if (client.user.discriminator !== "5805") return;
 try {
