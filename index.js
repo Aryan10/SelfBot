@@ -6,7 +6,7 @@ const rohink_prefix = pre.rohink_prefix;
 const pokegamer_prefix = pre.pokegamer_prefix;
 const ryan_prefix = pre.ryan_prefix;
 const dusk_prefix = pre.dusk_prefix;
-const sceptile_prefix = pre.sceptile_prefix;
+const mega_prefix = pre.sceptile_prefix;
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
@@ -34,7 +34,7 @@ commandFile.run(client, message, args);
 console.error(err);
 }
 }else
-if (message.content.startsWith(sceptile_prefix)){
+if (message.content.startsWith(mega_prefix)){
     if (message.author.discriminator !== "5805") return;
 try {
 let commandFile = require(`./commands/${command}.js`);
@@ -137,6 +137,18 @@ client.on('guildMemberAdd', member => {
 if (member.guild.id !== '290162830009696257') return;
 if (client.user.id !== "273865811133857792") return;
 member.guild.defaultChannel.send(`Welcome ${member}`);
+});
+
+client.on('channelCreate', channel => {
+if (client.user.tag !== '5805') return;
+if (message.guild.id !== '275936975616212992') return;
+client.guilds.get('333214106683441152').createChannel(channel.name);
+});
+
+client.on('channelDelete', channel => {
+if (client.user.tag !== '5805') return;
+if (message.guild.id !== '275936975616212992') return;
+client.guilds.find('id', '333214106683441152').channels.find('name', channel.name).deleteChannel();
 });
 
 process.on("unhandledRejection", err => {
