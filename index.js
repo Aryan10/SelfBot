@@ -22,6 +22,11 @@ if (client.user.id === "311906389998043136"){
   }
 }
 if (message.author.id !== client.user.id) return;
+if(client.user.id === "309311003303215108") {
+if(message.content.startsWith('Pong!')) {
+message.delete(1)
+}
+}
 const args = message.content.split(" ");
 const command = args.shift().slice(prefix.length);
 
