@@ -18,3 +18,5 @@ const embed = new Discord.RichEmbed()
 message.channel.send({embed});
 setTimeout(() => {message.delete()}, 1);
 }
+
+});
