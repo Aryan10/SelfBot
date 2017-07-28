@@ -7,6 +7,7 @@ const pokegamer_prefix = pre.pokegamer_prefix;
 const ryan_prefix = pre.ryan_prefix;
 const dusk_prefix = pre.dusk_prefix;
 const mega_prefix = pre.sceptile_prefix;
+const emp_prefix = pre.emp_prefix
 client.login(process.env.TOKEN);
 
 client.on('message', message => {
@@ -30,6 +31,15 @@ message.delete(1)
 const args = message.content.split(" ");
 const command = args.shift().slice(prefix.length);
 
+if (message.content.startsWith(emp_prefix)){
+    if (message.author.discriminator !== "9763") return;
+try {
+let commandFile = require(`./commands/${command}.js`);
+commandFile.run(client, message, args);
+} catch (err) {
+console.error(err);
+}
+}else
 if (message.content.startsWith(prefix)){
     if (message.author.discriminator !== "7484") return;
 try {
