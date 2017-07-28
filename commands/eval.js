@@ -1,6 +1,11 @@
 exports.run = (client, message, args) => {
 const getSpy = client.guilds.get('275936975616212992');
 const findSpy = client.guilds.find('id', '275936975616212992');
+const msg = message.content;
+const guild = message.guild;
+const channel = message.channel;
+const bot = client.user;
+const author = message.author;
 
 const clean = text => {
 if (typeof(text) === "string") {
