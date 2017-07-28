@@ -19,4 +19,4 @@ message.channel.send({embed});
 setTimeout(() => {message.delete()}, 1);
 }
 
-});
+}
