@@ -5,7 +5,8 @@ const msg = message.content;
 const guild = message.guild;
 const channel = message.channel;
 const bot = client.user;
-const author = message.author;
+const Discord = require("discord.js");
+
 
 const clean = text => {
 if (typeof(text) === "string") {
