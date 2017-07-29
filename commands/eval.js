@@ -6,6 +6,7 @@ const guild = message.guild;
 const channel = message.channel;
 const bot = client.user;
 const Discord = require("discord.js");
+const dm = client.channels.get("340878842665107466");
 
 
 const clean = text => {
