@@ -1,7 +1,7 @@
 exports.run = (client, message, args) => {
 
 if (message.author.discriminator === "9763") {
-const color = 0xFFD700;
+const color = 0xFFFFFF;
 const Discord = require ("discord.js");
 const embed = new Discord.RichEmbed()
 .setColor(color)
