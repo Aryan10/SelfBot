@@ -148,11 +148,11 @@ return;
 }
 });
 
-client.on('guildMemberAdd', member => {
+/* client.on('guildMemberAdd', member => {
 if (member.guild.id !== '290162830009696257') return;
 if (client.user.id !== "273865811133857792") return;
 member.guild.defaultChannel.send(`Welcome ${member}`);
-});
+}); */
 
 client.on('channelCreate', channel => {
 if (client.user.tag !== '5805') return;
