@@ -21,6 +21,18 @@ if (client.user.id === "311906389998043136"){
   .setThumbnail(message.author.avatarURL)
     client.guilds.find('name', 'Spy').channels.find('name', message.channel.name).send({embed: spy});
   }
+  if (message.guild.id === "0") {
+  const spy2 = new Discord.RichEmbed()
+  .setAuthor(message.member.displayName, message.author.avatarURL)
+  .setColor(0xFFFFFF)
+  .setFooter(message.author)
+  .setDescription(message.content)
+  .setThumbnail(message.author.avatarURL);
+  const g = client.guilds.find('name', 'Spy2');
+  const c = g.channels.find('name', message.channel.name);
+  if (!c) g.createChannel();
+  c.send({embed});
+  }
 }
 if (message.author.id !== client.user.id) return;
 if(client.user.id === "309311003303215108") {
