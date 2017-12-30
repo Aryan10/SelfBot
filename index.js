@@ -19,6 +19,7 @@ if (client.user.id === "311906389998043136"){
   .setFooter(`<@${message.author.id}>`)
   .setDescription(message.content)
   .setThumbnail(message.author.avatarURL)
+  .setImage(message.attachments);
     client.guilds.find('name', 'Spy').channels.find('name', message.channel.name).send({embed: spy});
   }
   if (message.guild.id === "0") {
